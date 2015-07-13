@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/rwstauner/apidoc-almond/issues"
   },
-  "homepage": "https://github.com/rwstauner/apidoc-almond#readme"
+  "homepage": "https://github.com/rwstauner/apidoc-almond#readme",
+  "dependencies": {
+    "almond": "^0.3.1",
+    "apidoc": ">=0.8.0"
+  }
 }
