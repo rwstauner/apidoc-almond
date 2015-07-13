@@ -1,0 +1,23 @@
+{
+  "name": "apidoc-almond",
+  "version": "0.0.1",
+  "description": "Optimize apidoc js with almond",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwstauner/apidoc-almond.git"
+  },
+  "keywords": [
+    "apidoc",
+    "almond"
+  ],
+  "author": "Randy Stauner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwstauner/apidoc-almond/issues"
+  },
+  "homepage": "https://github.com/rwstauner/apidoc-almond#readme"
+}
