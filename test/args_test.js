@@ -32,7 +32,7 @@ describe('args', function () {
     };
 
     it('works with all option styles', function () {
-      var str = '--input=X --output=Y -a -b 1 2';
+      var str = '--silent --input=X -a -b 1 2';
       expect( passed(str.split(' ')).join(' ') ).to.equal( str );
     });
   });

@@ -16,6 +16,7 @@ describe('main', function () {
     var out = testFile('out');
     Nut.main({
       argv: [
+        '--silent',
         '--input', path.relative(path.join(__dirname, '..'), testFile('doc')),
         '--output', out,
       ],
