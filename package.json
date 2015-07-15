@@ -1,6 +1,6 @@
 {
   "name": "apidoc-almond",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Optimize apidoc js with almond",
   "author": "Randy Stauner <randy@magnificent-tears.com>",
   "preferGlobal": true,
