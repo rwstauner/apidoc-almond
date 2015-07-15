@@ -2,7 +2,13 @@
   "name": "apidoc-almond",
   "version": "0.0.1",
   "description": "Optimize apidoc js with almond",
-  "main": "index.js",
+  "author": "Randy Stauner <randy@magnificent-tears.com>",
+  "preferGlobal": true,
+  "bin": "bin/apidoc-almond",
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +20,6 @@
     "apidoc",
     "almond"
   ],
-  "author": "Randy Stauner",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rwstauner/apidoc-almond/issues"
@@ -23,5 +28,6 @@
   "dependencies": {
     "almond": "^0.3.1",
     "apidoc": ">=0.8.0"
-  }
+  },
+  "apidoc": { }, "//": "just to avoid the warning"
 }
