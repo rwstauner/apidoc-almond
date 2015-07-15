@@ -27,6 +27,7 @@
   "homepage": "https://github.com/rwstauner/apidoc-almond#readme",
   "dependencies": {
     "almond": "^0.3.1",
+    "requirejs": "^2.1.19",
     "apidoc": ">=0.8.0"
   },
   "apidoc": { }, "//": "just to avoid the warning"
