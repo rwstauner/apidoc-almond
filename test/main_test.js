@@ -9,7 +9,7 @@ function testFile(basename) {
 }
 
 describe('main', function () {
-  it('should modify the index file', function(done) {
+  it('should build docs and modify index file', function(done) {
     // Takes about 15 seconds to optimize.
     this.timeout(30000);
 
