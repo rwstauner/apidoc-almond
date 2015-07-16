@@ -1,5 +1,7 @@
 # apidoc-almond
 
+[![Build Status](https://travis-ci.org/rwstauner/apidoc-almond.svg?branch=master)](https://travis-ci.org/rwstauner/apidoc-almond)
+
 This a dumb hack to optimize [apidoc][apidoc] output with [almond.js][almond].
 
 All arguments are passed to apidoc unless `--no-apidoc` is specified.
