@@ -1,7 +1,7 @@
 /*global describe, it */
 var Nut    = require('../lib'),
+    pfs    = require('../lib/pfs'),
     path   = require('path'),
-    fs     = require('fs'),
     expect = require('chai').expect;
 
 function testFile(basename) {
@@ -20,14 +20,13 @@ describe('main', function () {
         '--input', path.relative(path.join(__dirname, '..'), testFile('doc')),
         '--output', out,
       ],
-      cb: function() {
-        fs.readFile(path.resolve(out, 'index.html'), {encoding: 'utf8'}, function(err,data){
-          if (err) { throw err; }
-
+    }).then(function () {
+      pfs.readFile(path.resolve(out, 'index.html'), {encoding: 'utf8'}).then(
+        function (data) {
           expect( data ).to.match(/<script src="main.opt.js"/);
           done();
-        });
-      },
-    });
+        }
+      ).catch(done);
+    }).catch(done);
   });
 });
