@@ -8,17 +8,24 @@ All arguments are passed to apidoc unless `--no-apidoc` is specified.
 This allows the script to work as a wrapper (default) or simply a post-processor.
 
 
-# Install
+# Installation
+
+Install the same way you install `apidoc`:
 
     npm install -g apidoc-almond
 
+or add them both to your package.json and:
 
-# Use
+    npm install
+
+
+# Usage
 
     apidoc-almond -i app/ -o docs/
 
 Or, if you want to run apidoc separately first...
 
+    apidoc -o docs/ ...
     apidoc-almond -o docs/ --no-apidoc
 
 
