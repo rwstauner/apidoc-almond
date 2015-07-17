@@ -2,8 +2,9 @@
 
 ## {{NEXT}}
 
-* Respect apidoc's --silent option
-* Refactor to use Promises
+* Respect apidoc's `--silent` option.
+* Refactor to use Promises.
+* Add more tests.
 
 ## v0.0.3 _2015-07-15T04:48:14.358Z_
 
