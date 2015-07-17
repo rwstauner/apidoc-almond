@@ -1,6 +1,7 @@
 # apidoc-almond
 
 [![Build Status](https://travis-ci.org/rwstauner/apidoc-almond.svg?branch=master)](https://travis-ci.org/rwstauner/apidoc-almond)
+[![Coverage Status](https://coveralls.io/repos/rwstauner/apidoc-almond/badge.svg?branch=master&service=github)](https://coveralls.io/github/rwstauner/apidoc-almond?branch=master)
 
 This a dumb hack to optimize [apidoc][apidoc] output with [almond.js][almond].
 
