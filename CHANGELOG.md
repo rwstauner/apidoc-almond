@@ -1,6 +1,6 @@
 # apidoc-almond changelog
 
-## v1.0.0
+## v1.0.0 _2015-07-17T04:15:44.706Z_
 
 * Respect apidoc's `--silent` option.
 * Refactor to use Promises.
