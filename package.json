@@ -33,7 +33,8 @@
   },
   "devDependencies": {
     "chai": "^3.0.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "temp": "^0.8.3"
   },
   "peerDependencies": {
     "apidoc": ">=0.8.0"

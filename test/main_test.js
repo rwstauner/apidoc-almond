@@ -9,11 +9,7 @@ function testFile(basename) {
 }
 
 describe('main', function () {
-  it('should build docs and modify index file', function(done) {
-    // Takes about 15 seconds to optimize.
-    this.timeout(30000);
-
-    var out = testFile('out');
+  var test = function (out, done) {
     Nut.main({
       argv: [
         '--silent',
@@ -28,5 +24,14 @@ describe('main', function () {
         }
       ).catch(done);
     }).catch(done);
+  };
+
+  it('should build docs and modify index file', function(done) {
+    // Takes about 15 seconds to optimize.
+    this.timeout(30000);
+
+    pfs.tempdir('apidoc-almond-test')
+      .then(function (dir) { test(dir, done); })
+      .catch(done);
   });
 });
