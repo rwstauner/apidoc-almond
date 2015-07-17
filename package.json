@@ -10,6 +10,7 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
+    "test-coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
     "test": "mocha test"
   },
   "repository": {
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "chai": "^3.0.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
     "temp": "^0.8.3"
   },
