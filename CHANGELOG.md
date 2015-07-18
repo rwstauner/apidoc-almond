@@ -1,5 +1,10 @@
 # apidoc-almond changelog
 
+## {{NEXT}}
+
+* Improve error reporting.
+* More tests.
+
 ## v1.0.0 _2015-07-17T04:15:44.706Z_
 
 * Respect apidoc's `--silent` option.
