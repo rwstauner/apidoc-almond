@@ -5,7 +5,7 @@ var Nut    = require('../lib'),
     expect = require('chai').expect;
 
 function testFile(basename) {
-  return path.resolve(__dirname, '..', 'tmp', 'data', basename);
+  return path.resolve(__dirname, 'fixtures', basename);
 }
 
 describe('main', function () {
