@@ -19,7 +19,8 @@ describe('args', function () {
 
   describe('silent', function () {
     it('defaults to false', function () {
-      expect( (new Nut()).silent ).to.be.undefined;
+      // This seems clearer than 'to.not.be.true'.
+      expect( Boolean(new Nut().silent) ).to.be.false;
     });
     it('can be passed in', function () {
       expect( (new Nut({silent: true})).silent ).to.be.true;
