@@ -1,4 +1,4 @@
-/*global describe, it, before */
+/*global describe, it, before, after */
 var Nut    = require('../lib'),
     pfs    = require('../lib/pfs'),
     path   = require('path'),
@@ -35,6 +35,36 @@ describe('main', function () {
     pfs.tempdir('apidoc-almond-test')
       .then(function (dir) { test(dir, done); })
       .catch(done);
+  });
+
+  describe('print errors', function () {
+
+    var ce = console.error, errors = [];
+    before(function (done) {
+      console.error = function (err) { errors.push(err); };
+
+      Nut.main({
+        argv: [
+          '--silent',
+          '--input',  'something that does not exist',
+          '--output', 'something else that is not there',
+        ]
+      }).then(function () {
+        done();
+      }).catch(done);
+    });
+    after(function () {
+      console.error = ce;
+    });
+
+    it('should print show command exit status', function () {
+      expect( errors ).to.match(/Command "apidoc" exited with 1/);
+    });
+
+    it('should show failure to start requirejs', function () {
+      expect( errors ).to.match(/Cannot optimize;/);
+    });
+
   });
 
   describe('--help', function () {

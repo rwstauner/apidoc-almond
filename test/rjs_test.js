@@ -14,13 +14,14 @@ describe('requirejs', function () {
     // Should abort early.
     this.timeout(2000);
     var out = '/tmp/apidoc-almond/should/not.exist';
-    Nut.main({
+    new Nut({
       argv: [
         '--silent',
         '--no-apidoc',
         '--output', out,
       ],
-    }).then(function () {
+    }).run()
+    .then(function () {
       // Failure.
       done(new Error("Expected error, got none."));
     }, function (err) {
