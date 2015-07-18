@@ -17,6 +17,18 @@ describe('args', function () {
     });
   });
 
+  describe('silent', function () {
+    it('defaults to false', function () {
+      expect( (new Nut()).silent ).to.be.undefined;
+    });
+    it('can be passed in', function () {
+      expect( (new Nut({silent: true})).silent ).to.be.true;
+    });
+    it('comes from args', function () {
+      expect( (new Nut({argv: ['--silent']})).silent ).to.be.true;
+    });
+  });
+
   describe('pass through to apidoc', function () {
     var passed = function(argv) {
       var n = new Nut({argv: argv});

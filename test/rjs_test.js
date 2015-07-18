@@ -39,7 +39,10 @@ describe('requirejs', function () {
     // In this case the main.js exists
     // but the index.html to be munged afterwards does not.
 
-    (new Nut({dir: out})).rjs()
+    (new Nut({
+      dir: out,
+      silent: true,
+    })).rjs()
     .then(function () {
       // Failure.
       done(new Error("Expected error, got none."));
