@@ -31,6 +31,7 @@ describe('requirejs', function () {
   });
 
   it('should propagate the original error for any other case', function(done) {
+    this.slow(600);
     var out = testFile('badout');
 
     // We stat the file and provide a nicer message if it doesn't exist.

@@ -28,6 +28,7 @@ describe('main', function () {
 
   it('should build docs and modify index file', function(done) {
     // Takes about 15 seconds to optimize.
+    this.slow(16000);
     this.timeout(30000);
 
     pfs.tempdir('apidoc-almond-test')
