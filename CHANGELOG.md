@@ -3,7 +3,7 @@
 ## {{NEXT}}
 
 * Buffer and indent `apidoc` command output.
-* Improve error reporting.
+* Improve error handling.
 * Add more tests.
 
 ## v1.0.0 _2015-07-17T04:15:44.706Z_
