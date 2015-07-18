@@ -56,4 +56,16 @@ describe('requirejs', function () {
     .catch(done);
   });
 
+  it('should error when optimization errors', function (done) {
+    new Nut({dir: 'anything that does not exist', silent: true})._rjs({})
+    .then(function () {
+      // Failure.
+      done(new Error("Expected error, got none."));
+    }, function (err) {
+      expect( err.message ).to.match(/^RequireJS optimization failed:/);
+      done();
+    })
+    .catch(done);
+  });
+
 });
