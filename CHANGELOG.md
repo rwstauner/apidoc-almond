@@ -2,6 +2,7 @@
 
 ## {{NEXT}}
 
+* Buffer and indent `apidoc` command output.
 * Improve error reporting.
 * More tests.
 
