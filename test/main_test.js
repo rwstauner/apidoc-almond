@@ -1,4 +1,4 @@
-/*global describe, it */
+/*global describe, it, before */
 var Nut    = require('../lib'),
     pfs    = require('../lib/pfs'),
     path   = require('path'),
@@ -9,6 +9,7 @@ function testFile(basename) {
 }
 
 describe('main', function () {
+
   var test = function (out, done) {
     Nut.main({
       argv: [
@@ -35,4 +36,27 @@ describe('main', function () {
       .then(function (dir) { test(dir, done); })
       .catch(done);
   });
+
+  describe('--help', function () {
+
+    var printed = [];
+
+    before(function (done) {
+      this.slow(500);
+      var n = new Nut({argv: ['--help']});
+      n.print = function (msg) { printed.push(msg); };
+      n.run().then(function () { done(); }, done);
+    });
+
+    it('should print apidoc help message', function () {
+      // This is a bit fragile.
+      expect( printed ).to.match(/^ +Usage:.+ apidoc /m);
+    });
+
+    it('should print our usage message', function () {
+      expect( printed ).to.match(/^ +All arguments are passed to apidoc unless --no-apidoc /m);
+    });
+
+  });
+
 });
