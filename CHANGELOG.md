@@ -1,6 +1,6 @@
 # apidoc-almond changelog
 
-## {{NEXT}}
+## v1.1.0 _2015-07-19T00:56:03.401Z_
 
 * Propagate non-zero exit code of `apidoc` command.
 * Buffer and indent `apidoc` command output.
