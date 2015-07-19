@@ -61,8 +61,9 @@ describe('main', function () {
       expect( errors ).to.match(/Command "apidoc" exited with 1/);
     });
 
-    it('should show failure to start requirejs', function () {
-      expect( errors ).to.match(/Cannot optimize;/);
+    it('should set the process exit code', function () {
+      // Mocha will override this.
+      expect( process.exitCode ).to.equal( 1 );
     });
 
   });

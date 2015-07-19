@@ -2,6 +2,7 @@
 
 ## {{NEXT}}
 
+* Propagate non-zero exit code of `apidoc` command.
 * Buffer and indent `apidoc` command output.
 * Improve error handling.
 * Add more tests.
