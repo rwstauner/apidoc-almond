@@ -12,6 +12,7 @@
   "scripts": {
     "publish": "git push",
     "preversion": "npm run test-coverage",
+    "postversion": "./node_modules/replace/bin/replace.js '\\{\\{NEXT\\}\\}' \"`git tag | tail -n 1` _`node -p 'new Date().toISOString()'`_\" CHANGELOG.md",
     "test-coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
     "test": "mocha test"
   },
@@ -39,6 +40,7 @@
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
+    "replace": "^0.3.0",
     "temp": "^0.8.3"
   },
   "peerDependencies": {
