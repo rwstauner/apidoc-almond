@@ -10,7 +10,7 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "publish": "git push",
+    "publish": "git push; git push --tags",
     "preversion": "npm run test-coverage",
     "postversion": "./node_modules/replace/bin/replace.js '\\{\\{NEXT\\}\\}' \"`git tag | tail -n 1` _`node -p 'new Date().toISOString()'`_\" CHANGELOG.md",
     "test-coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
