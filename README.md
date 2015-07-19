@@ -5,7 +5,7 @@
 [![NPM version](https://badge.fury.io/js/apidoc-almond.svg)](http://badge.fury.io/js/apidoc-almond)
 
 
-This a dumb hack to optimize [apidoc][apidoc] output with [almond.js][almond].
+This a simple wrapper to optimize [apidoc][apidoc] output with [almond.js][almond].
 
 All arguments are passed to apidoc unless `--no-apidoc` is specified.
 This allows the script to work as a wrapper (default) or simply a post-processor.
